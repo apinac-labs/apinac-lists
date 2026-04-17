@@ -4,57 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APINAC Lists - Inicio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        .card-lista {
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text);
+            margin: 0;
             padding: 20px;
-            margin: 15px 0;
-            border: 1px solid #444;
-            border-radius: 10px;
+            line-height: 1.4;
+        }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { font-size: 1.2rem; color: #fff; margin-bottom: 5px; }
+        .sub { font-size: 0.8rem; color: #8b949e; }
+        
+        .container { max-width: 500px; margin: auto; }
+        
+        .card-lista {
+            background: var(--card);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
             cursor: pointer;
-            transition: 0.3s;
-            background: #1a1b1c; /* Un tono oscuro para que parezca de investigación */
+            transition: transform 0.2s, border-color 0.2s;
         }
-        .card-lista:hover { 
-            border-color: #007bff; 
-            transform: scale(1.02);
+        .card-lista:active { transform: scale(0.97); }
+        
+        h3 { 
+            margin: 0; 
+            font-size: 0.95rem; 
+            color: var(--accent);
+            font-weight: 600;
         }
-        h3 { margin-top: 0; color: #fff; }
-        p { color: #ccc; font-size: 0.9em; }
+        p { 
+            margin: 5px 0 0; 
+            font-size: 0.75rem; 
+            color: #8b949e; 
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a la base de datos oficial de APINAC Lists.</h1>
-        <p>Seleccione una lista para comenzar.</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Bienvenido a APINAC Lists.</h1>
+            <p class="sub">Seleccione una lista para comenzar.</p>
+        </header>
 
-    <main>
-        <div class="card-lista" onclick="irALista('sexto_tigre')">
-            <h3>6TO GRADO "D" - UE "EL TIGRE"</h3>
-            <p>Para recordar esos tiempos.</p>
-        </div>
+        <main>
+            <div class="card-lista" onclick="irALista('sexto_tigre')">
+                <h3>6to Grado "D" - UE "El Tigre"</h3>
+                <p>Para recordar esos tiempos.</p>
+            </div>
 
-        <div class="card-lista" onclick="irALista('primero_bello')">
-            <h3>PRIMER AÑO "U" - UEIP "ANDRÉS BELLO"</h3>
-            <p>El archivo de cuando nos conocimos.</p>
-        </div>
+            <div class="card-lista" onclick="irALista('primero_bello')">
+                <h3>1er Año "U" - UEIP "Andrés Bello"</h3>
+                <p>El Archivo de la primera.</p>
+            </div>
 
-        <div class="card-lista" onclick="irALista('segundo_bello')">
-            <h3>SEGUNDO AÑO "U" - UEIP "ANDRÉS BELLO"</h3>
-            <p>La etapa actual.</p>
-        </div>
+            <div class="card-lista" onclick="irALista('segundo_bello')">
+                <h3>2do Año "U" - UEIP "Andrés Bello"</h3>
+                <p>Nuestra etapa actual.</p>
+            </div>
 
-        <div class="card-lista" onclick="irALista('soulsnow_family')">
-            <h3>SOULSNOW'S FAMILY</h3>
-            <p>La familia.</p>
-        </div>
-    </main>
+            <div class="card-lista" onclick="irALista('soulsnow_family')">
+                <h3>Soulsnow's Family</h3>
+                <p>La Familia.</p>
+            </div>
+        </main>
+    </div>
 
     <script>
-        function irALista(idLista) {
-            // Esto nos mandará a la página de estudiantes con el nombre de la lista
-            window.location.href = `estudiantes.html?lista=${idLista}`;
+        function irALista(id) {
+            window.location.href = `estudiantes.html?lista=${id}`;
         }
     </script>
 </body>
