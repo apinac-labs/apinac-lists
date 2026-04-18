@@ -3,33 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - APINAC</title>
+    <title>Expediente de Investigación - APINAC</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --accent: #58a6ff; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
-        .ficha { background: var(--card); border: 1px solid #30363d; border-radius: 15px; padding: 20px; max-width: 450px; margin: auto; }
-        .label { font-size: 0.7rem; color: #8b949e; text-transform: uppercase; margin-top: 15px; display: block; }
-        .valor { font-size: 1rem; color: #fff; display: block; margin-bottom: 5px; }
-        .social { background: #21262d; padding: 10px; border-radius: 10px; margin-top: 10px; display: flex; justify-content: space-between; }
+        :root { --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 20px; line-height: 1.6; }
+        .container { max-width: 600px; margin: auto; }
+        .back-btn { color: var(--accent); text-decoration: none; font-size: 0.85rem; display: block; margin-bottom: 20px; }
+        
+        .ficha { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { color: #fff; font-size: 1.5rem; margin: 0; }
+        .alias { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 20px; display: block; }
+        
+        .section-title { font-size: 0.75rem; color: #8b949e; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border); padding-bottom: 5px; margin: 25px 0 15px; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .info-block { margin-bottom: 15px; }
+        .label { font-size: 0.7rem; color: #8b949e; display: block; }
+        .valor { font-size: 0.95rem; color: #fff; }
+
+        .red-social-card { background: #21262d; border-radius: 10px; padding: 15px; margin-bottom: 10px; }
+        .status-badge { font-size: 0.65rem; padding: 3px 8px; border-radius: 20px; background: var(--accent); color: #0d1117; font-weight: bold; float: right; }
+        
+        .notas-box { background: #0d1117; border: 1px dashed var(--border); padding: 15px; border-radius: 8px; font-size: 0.9rem; color: #8b949e; }
+        .footer-date { text-align: right; font-size: 0.7rem; color: #484f58; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="ficha" id="f"></div>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-btn">← Regresar al Archivo</a>
+        <div id="content"></div>
+    </div>
+
     <script src="datos.js"></script>
     <script>
-        const p = new URLSearchParams(window.location.search);
-        const s = sujetos[p.get('id')];
-        document.getElementById('f').innerHTML = `
-            <a href="javascript:history.back()" style="color:var(--accent); text-decoration:none; font-size:0.8rem;">← Regresar</a>
-            <h2 style="color:var(--accent)">${s.nombre}</h2>
-            <span class="label">Cumpleaños</span><span class="valor">${s.cumple}</span>
-            <span class="label">Teléfono</span><span class="valor">${s.tlf}</span>
-            <div class="social"><span>IG: ${s.ig}</span><small>${s.ig_st}</small></div>
-            <div class="social"><span>TT: ${s.tt}</span><small>${s.tt_st}</small></div>
-            <div class="social"><span>Roblox: ${s.rb}</span></div>
-            <span class="label">Notas</span><p style="font-size:0.9rem">${s.nota}</p>
-        `;
+        const params = new URLSearchParams(window.location.search);
+        const s = sujetos[params.get('id')];
+        
+        if (s) {
+            document.getElementById('content').innerHTML = `
+                <div class="ficha">
+                    <h1>${s.nombre}</h1>
+                    <span class="alias">${s.alias}</span>
+
+                    <div class="section-title">Datos Primarios</div>
+                    <div class="grid">
+                        <div class="info-block"><span class="label">Teléfono</span><span class="valor">${s.tlf}</span></div>
+                        <div class="info-block"><span class="label">Cumpleaños</span><span class="valor">${s.cumple}</span></div>
+                    </div>
+
+                    <div class="section-title">Inteligencia de Redes</div>
+                    
+                    <div class="red-social-card">
+                        <span class="status-badge">${s.tt_st}</span>
+                        <span class="label">TikTok</span>
+                        <span class="valor"><b>${s.tt_name}</b> (${s.tt_user})</span>
+                    </div>
+
+                    <div class="red-social-card">
+                        <span class="status-badge">${s.ig_st}</span>
+                        <span class="label">Instagram</span>
+                        <span class="valor"><b>${s.ig_name}</b> (${s.ig_user})</span>
+                    </div>
+
+                    <div class="red-social-card">
+                        <span class="status-badge">${s.rb_st}</span>
+                        <span class="label">Roblox</span>
+                        <span class="valor"><b>${s.rb_name}</b> (${s.rb_user})</span>
+                    </div>
+
+                    <div class="section-title">Notas de Investigación</div>
+                    <div class="notas-box">${s.nota}</div>
+
+                    <div class="footer-date">Última actualización: ${s.actualizado}</div>
+                </div>
+            `;
+        }
     </script>
 </body>
 </html>
