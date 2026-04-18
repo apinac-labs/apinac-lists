@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - APINAC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --accent: #58a6ff; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
+        .ficha { background: var(--card); border: 1px solid #30363d; border-radius: 15px; padding: 20px; max-width: 450px; margin: auto; }
+        .label { font-size: 0.7rem; color: #8b949e; text-transform: uppercase; margin-top: 15px; display: block; }
+        .valor { font-size: 1rem; color: #fff; display: block; margin-bottom: 5px; }
+        .social { background: #21262d; padding: 10px; border-radius: 10px; margin-top: 10px; display: flex; justify-content: space-between; }
+    </style>
+</head>
+<body>
+    <div class="ficha" id="f"></div>
+    <script src="datos.js"></script>
+    <script>
+        const p = new URLSearchParams(window.location.search);
+        const s = sujetos[p.get('id')];
+        document.getElementById('f').innerHTML = `
+            <a href="javascript:history.back()" style="color:var(--accent); text-decoration:none; font-size:0.8rem;">← Regresar</a>
+            <h2 style="color:var(--accent)">${s.nombre}</h2>
+            <span class="label">Cumpleaños</span><span class="valor">${s.cumple}</span>
+            <span class="label">Teléfono</span><span class="valor">${s.tlf}</span>
+            <div class="social"><span>IG: ${s.ig}</span><small>${s.ig_st}</small></div>
+            <div class="social"><span>TT: ${s.tt}</span><small>${s.tt_st}</small></div>
+            <div class="social"><span>Roblox: ${s.rb}</span></div>
+            <span class="label">Notas</span><p style="font-size:0.9rem">${s.nota}</p>
+        `;
+    </script>
+</body>
+</html>
