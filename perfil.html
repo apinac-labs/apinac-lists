@@ -87,6 +87,13 @@
                         </div>
                         <span class="label">Nombre de Usuario</span><span class="valor">${s.rb_user}</span>
                     </div>
+                    
+${s.extra ? `
+    <div class="section-title">Cuentas Secundarias / Respaldo</div>
+    <div class="red-social-card" style="border-color: #444;">
+        <p style="font-size: 0.9rem; color: #fff; margin: 0;">${s.extra}</p>
+    </div>
+` : ''}
 
                     <div class="section-title">Observaciones de Campo</div>
                     <div class="notas-box">${s.nota}</div>
