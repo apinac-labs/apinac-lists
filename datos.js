@@ -31,7 +31,7 @@ const sujetos = {
         nombre: "Abdias Vicent", alias: "---", tlf: "+58 412-1917203", cumple: "27 de enero", 
         tt_name: "soyadoxrandom27", tt_user: "str_xkcct", tt_st: "Verificada, Pública, Activa", 
         ig_name: "abdias vicent", ig_user: "arvicent27", ig_st: "Verificada, Pública, Activa", 
-        rb_name: "---", rb_user: "---", rb_st: "No Verificada", 
+        rb_name: "abdion304", rb_user: "abdion304", rb_st: "Verificada, Activa", 
         nota: "Estudiante de 1ro y 2do", actualizado: "18/04/2026",
         extra: [ { plataforma: "Instagram Secundario", nombre: "_ARvicent.mpa", user: "_arvicent.mpa", status: "Verificada, Pública, Inactiva" } ]
     },
@@ -39,7 +39,7 @@ const sujetos = {
         nombre: "Alejandra Osuna", alias: "---", tlf: "+58 422-4257062", cumple: "13 de julio", 
         tt_name: "suna", tt_user: "alejdra..osn", tt_st: "Verificada, Pública, Activa", 
         ig_name: "𝓪𝓵𝓮𝓳.𝓸𝓼𝓾𝓷", ig_user: "alejdraosn", ig_st: "Verificada, Pública, Activa", 
-        rb_name: "---", rb_user: "---", rb_st: "No Verificada", 
+        rb_name: "MipapiimA30", rb_user: "Osunalorax0196", rb_st: "Verificada, Activa", 
         nota: "Estudiante de 1ro y 2do", actualizado: "18/04/2026" 
     },
     "alondra_c": { 
@@ -61,7 +61,7 @@ const sujetos = {
         nombre: "Constanza Cabeza", alias: "---", tlf: "+58 424-8061770", cumple: "6 de septiembre", 
         tt_name: "costii", tt_user: "costi_46", tt_st: "Verificada, Principal, Pública, Activa", 
         ig_name: "Constanza Cabeza", ig_user: "costi_463", ig_st: "Verificada, Principal, Privada, Activa", 
-        rb_name: "---", rb_user: "---", rb_st: "No Verificada", 
+        rb_name: "Costi", rb_user: "Costi5541", rb_st: "Verificada, Activa", 
         nota: "Estudiante de 1ro y 2do", actualizado: "18/04/2026",
         extra: [ 
             { plataforma: "TikTok 2", nombre: "costii", user: "costi_40", status: "Verificada, Secundaria, Privada, Activa" },
@@ -70,12 +70,12 @@ const sujetos = {
             { plataforma: "Instagram 2", nombre: "costiii", user: "costii_44", status: "Verificada, Secundaria, Privada, Activa" }
         ]
     },
-    "daniel_e": { nombre: "Daniel Escalona", alias: "---", tlf: "+58 424-8622220", cumple: "25 de junio", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "Estudiante de 1ro y 2do", actualizado: "18/04/2026" },
+    "daniel_e": { nombre: "Daniel Escalona", alias: "---", tlf: "+58 424-8622220", cumple: "25 de junio", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "jonas400g", rb_user: "jonas400g", rb_st: "Verificada, Activa", nota: "Estudiante de 1ro y 2do", actualizado: "18/04/2026" },
     "daniela_d": { 
         nombre: "Daniela Dominguez", alias: "---", tlf: "+58 412-0281716", cumple: "27 de noviembre", 
         tt_name: "🪐✮⋆˙", tt_user: "dannnnm497", tt_st: "Verificada, Pública, Activa", 
         ig_name: "---", ig_user: "dani.ii778", ig_st: "Verificada, Pública, Activa", 
-        rb_name: "---", rb_user: "---", rb_st: "No Verificada", 
+        rb_name: "dani", rb_user: "daniella_34526", rb_st: "No Verificada", 
         nota: "Estudiante de 1ro y 2do", actualizado: "18/04/2026" 
     },
     "david_v": { 
@@ -89,7 +89,7 @@ const sujetos = {
         nombre: "Fabianna Viloria", alias: "---", tlf: "+58 412-1038174", cumple: "5 de marzo", 
         tt_name: "Taekjoo", tt_user: "taekjoo.vb", tt_st: "Verificada, Pública, Activa", 
         ig_name: "𝓥𝓲𝓵𝓸𝓻𝓲𝓪", ig_user: "taekjoo.vb", ig_st: "Verificada, Pública, Activa", 
-        rb_name: "---", rb_user: "---", rb_st: "No Verificada", 
+        rb_name: "Taekjoo", rb_user: "Hatsune9001", rb_st: "No Verificada", 
         nota: "Estudiante de 1ro y 2do", actualizado: "18/04/2026" 
     },
     "genio_g": { 
@@ -132,7 +132,7 @@ const sujetos = {
         nota: "Estudiante de 1ro y 2do", actualizado: "18/04/2026" 
     },
     "mauricio_v": { nombre: "Mauricio Villasana", alias: "---", tlf: "---", cumple: "---", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "Solo 1er año", actualizado: "18/04/2026" },
-    "paula_q": { nombre: "Paula Quijada", alias: "Mahi / Rain", tlf: "+58 424-8198382", cumple: "08 de septiembre", tt_name: "✶ 𓋜 𝓜𝘢𝙝𝘪 ♥︎ 𝓢 𝘪𝓶𝓸 ˙ Ꮺ", tt_user: "m.m4hicore", tt_st: "Verificada, Pública, Activa", ig_name: "Mahi (Simo's Husband)", ig_user: "m.mah1core", ig_st: "Verificada, Pública, Activa", rb_name: "Loki", rb_user: "r3liz_c", rb_st: "Verificada, Activa", nota: "Soulter Mahi de los Shizukesa", actualizado: "18/04/2026" },
+    "paula_q": { nombre: "Paula Quijada", alias: "Mahi/Rain - 🎨/🍷/🌧️/🪽", tlf: "+58 424-8198382", cumple: "08 de septiembre", tt_name: "✶ 𓋜 𝓜𝘢𝙝𝘪 ♥︎ 𝓢 𝘪𝓶𝓸 ˙ Ꮺ", tt_user: "m.m4hicore", tt_st: "Verificada, Pública, Activa", ig_name: "Mahi (Simo's Husband)", ig_user: "m.mah1core", ig_st: "Verificada, Pública, Activa", rb_name: "Loki", rb_user: "r3liz_c", rb_st: "Verificada, Activa", nota: "Nombre Completo: Soulter Mahi de los Shizukesa", actualizado: "18/04/2026" },
     "ricardo_o": { 
         nombre: "Ricardo Olivier", alias: "---", tlf: "+58 414-3955330", cumple: "9 de junio", 
         tt_name: "RICAR~~", tt_user: "ricardiviri1", tt_st: "Verificada, Pública, Activa", 
@@ -145,8 +145,8 @@ const sujetos = {
     "luna_l": { nombre: "Luna López", alias: "---", tlf: "---", cumple: "---", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "Ingreso en 2do Año", actualizado: "18/04/2026" },
 
     // --- SOULSNOW FAMILY ---
-    "jose_f": { nombre: "José Freites", alias: "Simo / John - 👽", tlf: "---", cumple: "---", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "Family", actualizado: "18/04/2026" },
-    "bubbly": { nombre: "Aaron Pinto", alias: "Bubbly - 🫧", tlf: "---", cumple: "---", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "El Creador del Grupo APINAC.", actualizado: "18/04/2026", extra: [ { plataforma: "TikTok Secundario", nombre: "Nombre Extra", user: "@usuario_2", status: "No Verificada, Activa, Privada" } ] },
+    "jose_f": { nombre: "José Freites", alias: "Simo/John - 👽", tlf: "+58 412-1098784", cumple: "10 de mayo", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "Family", actualizado: "18/04/2026" },
+    "bubbly": { nombre: "Aaron Pinto", alias: "Bubbly - 🫧", tlf: "+58 424-8779640", cumple: "16 de febrero", tt_name: "⊹ •˙𝘽𝒖̲͟𝒃͟𝒃͟𝒍𝒚.•🫧∘˙◆", tt_user: "bubble.bee.1.0", tt_st: "Verificada, Pública, Activa", ig_name: "⊹ •˙𝘽𝒖̲͟𝒃͟𝒃͟𝒍𝒚.•🫧∘˙◆", ig_user: "bubble.bee.1.0", ig_st: "Verificada, Privada, Activa", rb_name: "Bubbly", rb_user: "aaron1_xd4", rb_st: "Verificada, Activa", nota: "El Creador del Grupo APINAC. Amo a mi twinny <3.", actualizado: "18/04/2026", extra: [ { plataforma: "---", nombre: "---", user: "---", status: "Inexistente" } ] },
     "max_f": { nombre: "Max", alias: "---", tlf: "---", cumple: "---", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "Family", actualizado: "18/04/2026" },
     "val_f": { nombre: "Val/Fan", alias: "---", tlf: "---", cumple: "---", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "Family", actualizado: "18/04/2026" },
     "mayday_f": { nombre: "Mayday/Winter", alias: "---", tlf: "---", cumple: "---", tt_name: "---", tt_user: "---", tt_st: "No Verificada", ig_name: "---", ig_user: "---", ig_st: "No Verificada", rb_name: "---", rb_user: "---", rb_st: "No Verificada", nota: "Family", actualizado: "18/04/2026" },
