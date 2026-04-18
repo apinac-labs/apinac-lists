@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista - APINAC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --accent: #58a6ff; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
+        .container { max-width: 500px; margin: auto; }
+        .back { color: var(--accent); text-decoration: none; font-size: 0.8rem; display: block; margin-bottom: 20px; }
+        .card { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 14px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+        button { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back">← Volver</a>
+        <h2 id="titulo">Cargando...</h2>
+        <div id="lista"></div>
+    </div>
+    <script src="datos.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const lId = params.get('lista');
+        document.getElementById('titulo').innerText = lId.replace('_', ' ').toUpperCase();
+        const cont = document.getElementById('lista');
+        baseDeDatos[lId].forEach(id => {
+            const p = sujetos[id];
+            cont.innerHTML += `<div class="card"><span>${p.nombre}</span><button onclick="location.href='perfil.html?lista=${lId}&id=${id}'">Ficha</button></div>`;
+        });
+    </script>
+</body>
+</html>
