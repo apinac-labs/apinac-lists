@@ -56,7 +56,7 @@ const sujetos = {
     "bubbly": { nombre: "Bubbly", cumple: "---", tlf: "---", ig: "---", ig_st: "---", tt: "---", tt_st: "---", rb: "---", nota: "Family" },
     "max_f": { nombre: "Max", cumple: "---", tlf: "---", ig: "---", ig_st: "---", tt: "---", tt_st: "---", rb: "---", nota: "Family" },
     "val_f": { nombre: "Val/Fan", cumple: "---", tlf: "---", ig: "---", ig_st: "---", tt: "---", tt_st: "---", rb: "---", nota: "Family" },
-    "mayday_f": { nombre: "Mayday/Winter", cumple: "---", tlf: "---", ig: "---", ig_st: "---", tt: "---", tt_st: "---", rb: "---", nota: "Family" }
+    "mayday_f": { nombre: "Mayday/Winter", cumple: "---", tlf: "---", ig: "---", ig_st: "---", tt: "---", tt_st: "---", rb: "---", nota: "Family" },
     "bal_f": { nombre: "Bal/Kyom", cumple: "---", tlf: "---", ig: "---", ig_st: "---", tt: "---", tt_st: "---", rb: "---", nota: "Family" }
 };
 
