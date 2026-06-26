@@ -6,11 +6,13 @@
     <title>APINAC Lists - Inicio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* ESTILOS CON LOS NUEVOS BASAMIENTOS DE LA DIVISIÓN INVESTIGACIÓN */
         :root {
-            --bg: #0d1117;
-            --card: #161b22;
-            --text: #c9d1d9;
-            --accent: #58a6ff;
+            --bg: #091212;            /* Fondo oscuro profundo con matiz de la división */
+            --card: #0f1c1b;          /* Contenedores de listas basados en el tono */
+            --text: #e1eceb;          /* Letras principales con un sutil gélido/verdoso */
+            --accent: #006361;        /* COLOR PRINCIPAL DE LA DIVISIÓN INVESTIGACIÓN */
+            --sub-text: #6f8583;      /* Color secundario apagado para descripciones */
         }
         body { 
             font-family: 'Inter', sans-serif; 
@@ -22,13 +24,13 @@
         }
         header { text-align: center; margin-bottom: 30px; }
         h1 { font-size: 1.2rem; color: #fff; margin-bottom: 5px; }
-        .sub { font-size: 0.8rem; color: #8b949e; }
+        .sub { font-size: 0.8rem; color: var(--sub-text); }
         
         .container { max-width: 500px; margin: auto; }
         
         .card-lista {
             background: var(--card);
-            border: 1px solid #30363d;
+            border: 1px solid #1c3533; /* Borde oscuro en la gama de la división */
             border-radius: 12px;
             padding: 16px;
             margin-bottom: 12px;
@@ -40,13 +42,18 @@
         h3 { 
             margin: 0; 
             font-size: 0.95rem; 
-            color: var(--accent);
+            color: var(--text);        /* Cambiado a texto claro para que sea más legible en móviles */
             font-weight: 600;
+            transition: color 0.2s;
+        }
+        /* Cuando se interactúe con la tarjeta, el título brillará con el color de la división */
+        .card-lista:active h3 {
+            color: var(--accent);
         }
         p { 
             margin: 5px 0 0; 
             font-size: 0.75rem; 
-            color: #8b949e; 
+            color: var(--sub-text); 
         }
     </style>
 </head>
