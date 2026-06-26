@@ -6,30 +6,43 @@
     <title>Perfil - APINAC</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; --update: #e3b341; }
+        /* ESTILOS CON LOS NUEVOS BASAMIENTOS DE LA DIVISIÓN INVESTIGACIÓN */
+        :root { 
+            --bg: #091212;            /* Fondo oscuro profundo con matiz de la división */
+            --card: #0f1c1b;          /* Ficha de perfil basada en el tono de investigación */
+            --text: #e1eceb;          /* Letras con un sutil gélido/verdoso muy limpio */
+            --accent: #006361;        /* COLOR PRINCIPAL DE LA DIVISIÓN INVESTIGACIÓN */
+            --border: #1c3533;        /* Bordes oscuros integrados en la gama */
+            --update: #e3b341;        /* Se mantiene el dorado para destacar la fecha */
+        }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 20px; line-height: 1.6; }
         .container { max-width: 650px; margin: auto; }
-        .back-btn { color: var(--accent); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 20px; font-weight: 600; }
+        .back-btn { color: var(--text); opacity: 0.8; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 20px; font-weight: 600; transition: opacity 0.2s; }
+        .back-btn:active { opacity: 1; color: var(--accent); }
         
         .ficha { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); }
         h1 { color: #fff; font-size: 1.8rem; margin: 0; letter-spacing: -0.5px; }
-        .alias { color: var(--accent); font-weight: 600; font-size: 1rem; margin-bottom: 25px; display: block; opacity: 0.9; }
+        .alias { color: var(--text); font-weight: 600; font-size: 1rem; margin-bottom: 25px; display: block; opacity: 0.9; }
         
-        .section-title { font-size: 0.8rem; color: #8b949e; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin: 30px 0 15px; font-weight: 600; }
+        .section-title { font-size: 0.8rem; color: #6f8583; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin: 30px 0 15px; font-weight: 600; }
         
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .label { font-size: 0.75rem; color: #8b949e; display: block; margin-bottom: 2px; }
+        .label { font-size: 0.75rem; color: #6f8583; display: block; margin-bottom: 2px; }
         .valor { font-size: 1.05rem; color: #fff; font-weight: 400; }
 
-        .red-social-card { background: #21262d; border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 15px; }
+        /* Tarjetas de redes sociales adaptadas al nuevo entorno */
+        .red-social-card { background: #132423; border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 15px; }
         .social-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
         .badge-container { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; max-width: 60%; }
-        .status-badge { font-size: 0.6rem; padding: 4px 10px; border-radius: 6px; background: #30363d; color: var(--accent); font-weight: bold; border: 1px solid var(--accent); text-transform: uppercase; }
         
-        .notas-box { background: #0d1117; border: 1px solid var(--border); padding: 20px; border-radius: 12px; font-size: 1rem; color: #c9d1d9; min-height: 80px; }
+        /* Badges de estado estilizados con el color de la división */
+        .status-badge { font-size: 0.6rem; padding: 4px 10px; border-radius: 6px; background: #0f1c1b; color: #fff; font-weight: bold; border: 1px solid var(--accent); text-transform: uppercase; }
+        
+        /* Caja de notas integrada en el fondo general */
+        .notas-box { background: var(--bg); border: 1px solid var(--border); padding: 20px; border-radius: 12px; font-size: 1rem; color: var(--text); min-height: 80px; }
         
         .footer-update { text-align: center; margin-top: 35px; padding-top: 20px; border-top: 1px solid var(--border); }
-        .upd-label { display: block; font-size: 0.8rem; color: #8b949e; }
+        .upd-label { display: block; font-size: 0.8rem; color: #6f8583; }
         .upd-date { font-size: 1.2rem; color: var(--update); font-weight: 600; }
     </style>
 </head>
@@ -46,7 +59,6 @@
         
         function createBadges(statusString) {
             if (!statusString || statusString === "---") return '<span class="status-badge">Sin Datos</span>';
-            // Separamos por comas si los escribes así en datos.js: "Verificada, Activa, Pública"
             return statusString.split(',').map(status => `<span class="status-badge">${status.trim()}</span>`).join('');
         }
 
