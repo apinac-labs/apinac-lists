@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista - APINAC</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* ESTILOS EXACTOS BASADOS EN TU index.html (image_0.png) */
+        /* ESTILOS CON LOS NUEVOS BASAMIENTOS DE LA DIVISIÓN INVESTIGACIÓN */
         :root {
-            --bg: #0d1117;
-            --card: #161b22;
-            --text: #c9d1d9;
-            --accent: #58a6ff;
-            --sub-text: #8b949e;
+            --bg: #091212;            /* Fondo oscuro profundo con matiz de la división */
+            --card: #0f1c1b;          /* Contenedores de estudiantes basados en el tono */
+            --text: #e1eceb;          /* Letras con un sutil gélido/verdoso muy limpio */
+            --accent: #006361;        /* COLOR PRINCIPAL DE LA DIVISIÓN INVESTIGACIÓN */
+            --sub-text: #6f8583;      /* Color secundario apagado en la misma gama */
         }
         body { 
             font-family: 'Inter', sans-serif; 
@@ -26,12 +26,15 @@
         
         header { text-align: center; margin-bottom: 25px; }
         .back-link { 
-            color: var(--accent); 
+            color: var(--text);       /* Cambiado a texto plano para que no compita con el título */
+            opacity: 0.8;
             text-decoration: none; 
             font-size: 0.8rem; 
             display: inline-block; 
             margin-bottom: 15px;
+            transition: opacity 0.2s;
         }
+        .back-link:active { opacity: 1; color: var(--accent); }
         
         h2 { 
             font-size: 1.2rem; 
@@ -45,7 +48,7 @@
         
         .card-estudiante { 
             background: var(--card); 
-            border: 1px solid #30363d; 
+            border: 1px solid #1c3533; /* Borde oscuro que combina con el basamiento */
             border-radius: 12px; 
             padding: 14px 16px; 
             margin-bottom: 10px; 
@@ -58,14 +61,14 @@
         .btn-ficha { 
             background: transparent; 
             border: 1px solid var(--accent); 
-            color: var(--accent); 
+            color: #fff;               /* Texto del botón en blanco para legibilidad sobre el verde */
             padding: 6px 14px; 
             border-radius: 8px; 
             cursor: pointer; 
             font-size: 0.8rem; 
             transition: background 0.2s;
         }
-        .btn-ficha:active { background: rgba(88, 166, 255, 0.1); }
+        .btn-ficha:active { background: var(--accent); }
         
     </style>
 </head>
@@ -78,16 +81,15 @@
         </header>
         
         <div id="estudiante-list" class="estudiante-list">
-            </div>
+        </div>
     </div>
     
     <script src="datos.js"></script>
+    <script src="datos2.js"></script>
     <script>
         const params = new URLSearchParams(window.location.search);
         const lId = params.get('lista');
         
-        // --- AQUÍ ESTÁ EL TRADUCTOR CLAVE ---
-        // Estos nombres deben coincidir EXACTAMENTE con image_0.png
         const nombresDeLista = {
             "sexto_tigre": "6to Grado \"D\" - UE \"El Tigre\"",
             "primero_bello": "1er Año \"U\" - UEIP \"Andrés Bello\"",
@@ -107,11 +109,9 @@
         const listaContenedor = document.getElementById('estudiante-list');
 
         if (baseDeDatos[lId] && nombresDeLista[lId]) {
-            // Aplicamos el nombre bonito y la sub-info
             tituloContenedor.innerText = nombresDeLista[lId];
             subInfoContenedor.innerText = subInfoLista[lId];
             
-            // Cargamos los estudiantes
             baseDeDatos[lId].forEach(id => {
                 const p = sujetos[id];
                 if (p) {
