@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista - APINAC</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;600&display=swap" rel="stylesheet">
+    <!-- ESTOS DOS ENLACES DE ABAJO REPARAN LA FUENTE EN GITHUB PAGES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* ESTILOS CON LOS NUEVOS BASAMIENTOS DE LA DIVISIÓN INVESTIGACIÓN */
         :root {
-            --bg: #091212;            /* Fondo oscuro profundo con matiz de la división */
-            --card: #0f1c1b;          /* Contenedores de estudiantes basados en el tono */
-            --text: #e1eceb;          /* Letras con un sutil gélido/verdoso muy limpio */
-            --accent: #006361;        /* COLOR PRINCIPAL DE LA DIVISIÓN INVESTIGACIÓN */
-            --sub-text: #6f8583;      /* Color secundario apagado en la misma gama */
+            --bg: #091212;            
+            --card: #0f1c1b;          
+            --text: #e1eceb;          
+            --accent: #006361;        
+            --sub-text: #6f8583;      
         }
         body { 
             font-family: 'Inter', sans-serif; 
+            font-weight: 400; /* Obliga al navegador a aplicar el grosor estándar de Inter */
             background: var(--bg); 
             color: var(--text); 
             padding: 20px; 
@@ -26,7 +30,7 @@
         
         header { text-align: center; margin-bottom: 25px; }
         .back-link { 
-            color: var(--text);       /* Cambiado a texto plano para que no compita con el título */
+            color: var(--text);       
             opacity: 0.8;
             text-decoration: none; 
             font-size: 0.8rem; 
@@ -48,7 +52,7 @@
         
         .card-estudiante { 
             background: var(--card); 
-            border: 1px solid #1c3533; /* Borde oscuro que combina con el basamiento */
+            border: 1px solid #1c3533; 
             border-radius: 12px; 
             padding: 14px 16px; 
             margin-bottom: 10px; 
@@ -61,7 +65,7 @@
         .btn-ficha { 
             background: transparent; 
             border: 1px solid var(--accent); 
-            color: #fff;               /* Texto del botón en blanco para legibilidad sobre el verde */
+            color: #fff;               
             padding: 6px 14px; 
             border-radius: 8px; 
             cursor: pointer; 
